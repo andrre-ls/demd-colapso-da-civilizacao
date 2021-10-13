@@ -1,0 +1,495 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+:root {
+	--svgWidth: 90%;
+	--strokeWidth: 0.5rem;
+	--optionOpacityDelay: 0.5s;
+	--defaultFade: 0.5s;
+	--crackTransitionDuration: 0.2s;
+	--crackBackground: black;
+	--transitionScreenDuration: 1s;
+	--green: #26a349;
+}
+
+@font-face {
+	font-family: bodyFont;
+	src: url(resources/fonts/Inter-Regular-slnt=0.ttf);
+}
+
+/* Texto de apresentação */
+#crackScreenContainer {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--crackBackground);
+	text-align: center;
+	clip-path: url(#mask0);
+	/* pointer-events: none; */
+}
+
+#crackScreen {
+	position: absolute;
+	top: 275px;
+	left: 50%;
+	height: 60vh;
+	width: 60vw;
+	min-width: 500px;
+	max-width: 750px;
+	transform: translate(-50%, -50%);
+	color: white;
+	filter: blur(1px);
+}
+
+.textSvg {
+	margin: 50px 0;
+	margin-top: 15vh;
+	/* transform: translate(-20px, 0); */
+	width: 60vw;
+	max-width: 750px;
+}
+
+.smalllerSvg {
+	display: block;
+	width: 10%;
+	min-width: 75px;
+	margin: 20px auto;
+	margin-top: 60px;
+}
+
+#nota {
+	font-style: bold;
+	margin: 40px 0;
+}
+
+#textContainer {
+	font-family: bodyFont;
+	position: relative;
+	width: 100%;
+	height: 60vh;
+	overflow-y: scroll;
+}
+
+#gradient {
+	width: 100%;
+	height: 40px;
+	transform: translate(0, -35px);
+	background: rgb(0, 0, 0);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#textContainer::-webkit-scrollbar {
+	width: 8px;
+	/* width of the entire scrollbar */
+}
+
+#textContainer::-webkit-scrollbar-track {
+	background: rgba(20, 20, 20, 1);
+}
+
+#textContainer::-webkit-scrollbar-thumb {
+	background-color: rgba(200, 200, 200, 1);
+	border-radius: 10px;
+	/* roundness of the scroll thumb */
+}
+
+#textContainer > section {
+	margin: 0 25px;
+}
+
+#crackMasks {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+}
+
+#crackMasks > svg {
+	height: 100vh;
+	width: 100vw;
+}
+
+#crackMasks > svg > path {
+	fill: black;
+	stroke: none;
+}
+
+.chapter > svg,
+#globals > svg {
+	margin: auto;
+	position: absolute;
+	width: var(--svgWidth);
+	min-width: 500px;
+	top: 50%;
+	left: 50%;
+	height: 100vh;
+	transform: translate(-50%, -53%);
+	background-color: transparent;
+	overflow: hidden;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity var(--defaultFade) ease;
+}
+
+path {
+	fill: none;
+	stroke: #1d1d1b;
+	stroke-width: var(--strokeWidth);
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.option_1,
+.option_2 {
+	transition: opacity 0.25s ease;
+}
+
+.op_container,
+.svgContainer {
+	opacity: 0;
+	pointer-events: all;
+	cursor: pointer;
+}
+
+.op_hover {
+	stroke: var(--green);
+	opacity: 0;
+	transition: opacity var(--optionOpacityDelay) ease;
+	z-index: 999999;
+	stroke-width: 1rem;
+}
+
+#nextArrrow {
+	display: none;
+	transition: opacity var(--optionOpacityDelay) ease;
+}
+
+#arrowBackdrop {
+	padding: 20px;
+	opacity: 1;
+	fill: url(#MyGradient);
+	pointer-events: none;
+}
+
+.crack {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: transparent;
+	overflow: hidden;
+	pointer-events: none;
+	transition: 0.5s ease;
+}
+
+.crack > polygon {
+	cursor: pointer;
+	pointer-events: all;
+	opacity: 0;
+}
+
+.crackBottom {
+	height: 50vh;
+	width: auto;
+	bottom: 0;
+}
+
+.crackTop {
+	height: 50vh;
+	width: auto;
+	top: 0;
+}
+
+.crackLeft {
+	height: auto;
+	width: 50vw;
+	left: 0;
+}
+
+.crackRight {
+	height: auto;
+	width: 50vw;
+	right: 0;
+}
+
+#crackTransition {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0px;
+	height: 0px;
+	transform: translate(-50%, -50%);
+	background-color: var(--crackBackground);
+	border-radius: 100%;
+	pointer-events: none;
+	transition: all var(--crackTransitionDuration) ease-in;
+	opacity: 0;
+	transition-property: height, width;
+}
+
+.close {
+	cursor: pointer;
+}
+
+/* https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+.noselect {
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Old versions of Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#chapterContainer {
+	width: 100vw;
+	height: 100vh;
+}
+
+#blackOut {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+}
+
+#animationsContainer {
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.animation {
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: auto;
+}
+
+.videoContainer {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 200ms ease;
+}
+
+.center {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.top {
+	left: 50%;
+	top: 0%;
+	transform: translate(-50%, 0%);
+}
+
+.topLeft {
+	left: 0;
+	top: 0%;
+}
+
+.bottom {
+	left: 50%;
+	bottom: 0%;
+	transform: translate(-50%, 0%);
+}
+
+.bottomLeft {
+	left: 0;
+	bottom: 0;
+}
+
+.fitHeight {
+	height: 100%;
+	width: auto;
+}
+
+.fitWidth {
+	width: 100vw;
+	height: auto;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.fitWidthBottom {
+	width: 100vw;
+	height: auto;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%);
+}
+
+.videoContainer {
+	position: absolute;
+}
+
+#c1p2 {
+	width: 100vw;
+	height: auto;
+}
+
+#c2p1,
+#c2p2 {
+	width: 70vw;
+	height: auto;
+}
+
+#c3p1_1,
+#c3p1_2 {
+	width: auto;
+	transform: translate(-5vw, 0);
+	height: 100vh;
+}
+
+#c3p2,
+#c4p1_1,
+#c4p1_2 {
+	width: 100vw;
+	height: auto;
+}
+
+#c4p2 {
+	transform: translate(0, -25%);
+}
+
+#c5p1_1,
+#c5p1_2 {
+	width: 100vw;
+	height: auto;
+}
+
+#c5p2 {
+	height: 80vh;
+}
+
+#transitionScreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity var(--transitionScreenDuration);
+}
+
+#error {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white;
+}
+
+#error > div {
+	position: absolute;
+	width: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#error img {
+	display: block;
+	width: 200px;
+	position: relative;
+	margin: 25px auto;
+}
+
+#error section {
+	font-family: bodyFont;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+#loading {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: opacity 900ms;
+	background-color: black;
+}
+
+#loading > img {
+	filter: invert(1);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	transition: opacity 500ms ease;
+}
+
+#arrowBack {
+	stroke: white;
+	stroke-width: 1rem;
+}
+
+#about {
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	margin: 25px;
+	right: 0;
+	top: 0;
+}
+
+#about > img {
+	height: 100%;
+	width: auto;
+	cursor: pointer;
+	opacity: 0.3;
+	transition: opacity 0.2s ease;
+}
+
+#about:hover img {
+	opacity: 0.7;
+}
+
+#aboutScreen {
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transition: opacity 0.5s ease;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#aboutScreen > img {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	width: 400px;
+}

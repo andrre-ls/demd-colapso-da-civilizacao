@@ -1,0 +1,330 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>O Colapso da Civilização</title>
+  <link rel="icon" type="image/png" href="resources/global/favicon.png">
+  <link rel="stylesheet" href="global.css">
+  <script src="frameworks/jquery.js"></script>
+  <script defer type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+
+  <div id="loading" class="noselect">
+    <img src="resources/global/loading.gif">
+  </div>
+
+  <div id="godContainer" style="display: none">
+    <div id="animationsContainer">
+      <div class="videoContainer fitHeight" style="display: none">
+        <video id="c1p1" class="animation fillVertical" muted>
+          <source src="resources/chapters/1/c1p1.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer bottom" style="display: none">
+        <video id="c1p2" class="animation fillVertical" muted loop>
+          <source src="resources/chapters/1/c1p2.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer bottomLeft" style="display: none">
+        <video id="c2p1" class="animation fillVertical" muted loop>
+          <source src="resources/chapters/2/c2p1.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer bottomLeft" style="display: none">
+        <video id="c2p2" class="animation fillVertical" muted loop>
+          <source src="resources/chapters/2/c2p2.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer bottom" style="display: none">
+        <video id="c3p1_1" class="animation fillVertical" muted>
+          <source src="resources/chapters/3/c3p1_1.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer bottom" style="display: none">
+        <video id="c3p1_2" class="animation fillVertical" muted loop>
+          <source src="resources/chapters/3/c3p1_2.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer fitWidth" style="display: none">
+        <video id="c3p2" class="animation " muted loop>
+          <source src="resources/chapters/3/c3p2.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer center" style="display: none">
+        <video id="c4p1_1" class="animation " muted>
+          <source src="resources/chapters/4/c4p1_1.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer center" style="display: none">
+        <video id="c4p1_2" class="animation " muted loop>
+          <source src="resources/chapters/4/c4p1_2.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer topLeft" style="display: none">
+        <video id="c4p2" class="animation " muted loop>
+          <source src="resources/chapters/4/c4p2.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer fitWidthBottom" style="display: none">
+        <video id="c5p1_1" class="animation " muted>
+          <source src="resources/chapters/5/c5p1_1.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer fitWidthBottom" style="display: none">
+        <video id="c5p1_2" class="animation " muted loop>
+          <source src="resources/chapters/5/c5p1_2.mov" type="video/ogg">
+        </video>
+      </div>
+      <div class="videoContainer bottomLeft" style="display: none">
+        <video id="c5p2" class="animation " muted loop>
+          <source src="resources/chapters/5/c5p2.mov" type="video/ogg">
+        </video>
+      </div>
+    </div>
+
+    <div id="chapterContainer">
+      <div id="chapter_1" class="chapter" style="display: none">
+      </div>
+      <div id="chapter_2" class="chapter" style="display: none">
+      </div>
+      <div id="chapter_3" class="chapter" style="display: none">
+      </div>
+      <div id="chapter_4" class="chapter" style="display: none">
+      </div>
+      <div id="chapter_5" class="chapter" style="display: none">
+      </div>
+    </div>
+    <div id="globals">
+      <svg style="display: none" id="nextArrrow" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920px" height="1080px" viewBox="0 0 1920 1080"
+        style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+        <defs>
+          <radialGradient id="MyGradient">
+            <stop offset="0%" stop-color="rgba(255, 255, 255, 0.76)" />
+            <stop offset="80%" stop-color="rgba(255, 255, 255, 0)" />
+          </radialGradient>
+        </defs>
+        <g>
+          <path style="transform: translate(8px, 0px)" id="arrowBack" fill="none" d="M822.6,898.1c19.6-19.1,39.3-38.1,58.9-57.2c-11.5,30.5-26.7,59.5-45.1,86.4c24-35.1,50.8-68.3,80-99.2
+          c-8,28-16.9,55.8-26.7,83.2c16.5-32.3,36.1-63,58.4-91.6c-14.3,36.2-28.7,72.4-43,108.6c18.8-40.4,42.1-78.6,69.4-113.8
+          c-5.2,31.6-13.1,62.8-23.5,93c13.9-31,30.6-60.8,49.6-89c-5.7,31.2-12.7,62.1-20.9,92.7c17.2-25.1,32.6-51.5,46-78.8
+          c-4.5,22.1-9.1,44.2-13.6,66.3c12.3-18.7,23.5-38,33.6-57.9c-0.1,15.3-1.5,30.6-4.4,45.6c5.7-9.2,11.5-18.3,17.2-27.5
+          c-0.3,6.6-0.5,13.3-0.8,19.9c3.4-3.4,6.8-6.7,10.2-10.1c1.4,5.3,1.8,10.8,1.2,16.3" />
+        </g>
+        <!-- <rect id="arrowBackdrop" x="715" y="791" style="&st1;" width="500" height="154" /> -->
+        <path  d="M883,869.2c47.7-0.2,95.4-2.3,143-6.4" />
+        <path d="M994.8,848.6c9.2,3.5,18.5,6.9,27.7,10.4c1.1,0.4,2.3,1,2.6,2.1c0.4,1.4-1,2.6-2.1,3.4
+    			c-9.2,6.6-18.5,13.2-27.7,19.8" />
+        <rect class="svgContainer" x="863" y="816"  width="195" height="104" />
+        </g>
+      </svg>
+    </div>
+
+    <span id="crackTransition">
+    </span>
+
+    <svg id="crackStorage" viewBox="0 0 1920 1080" style="position: fixed">
+      <defs>
+        <clipPath id="mask0" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)"></clipPath>
+        <clipPath id="mask1" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M1703.2,1082.4l-10.7-13.4v-12.8l-6.3-12.4l-19.9-6.8l-31-34.2l26.4,40.4l17.2,5.5l3.6,7.5
+          l-1.2,15.7l11.5,10.5H1703.2z" />
+          <path d="M355.9-4.1l21.7,18.9l-3.6,20.9l11.2,14.7l24.9,9.5l16.2,38.8l-14.1-42.7l-23.3-8.7l-11.3-11.7
+        		l7.5-24L371.4-4.1H355.9z" />
+        </clipPath>
+        <clipPath id="mask2" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M355.9-4.1l45.8,39.9L394,80l23.5,31l52.6,20.1l34.3,81.8L474.7,123l-49.1-18.4L401.7,80l15.8-50.7
+          L388.6-4.1H355.9z" />
+          <path d="M1703.2,1082.4l-19.1-24v-22.8l-11.2-22.2l-35.5-12.1l-55.3-61.1l47.2,72.2l30.7,9.8l6.5,13.4
+            l-2.1,28l20.6,18.8H1703.2z" />
+        </clipPath>
+        <clipPath id="mask3" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M354.4-5.6l68.9,60.1l-11.6,66.4l35.4,46.6l79.1,30.3l51.5,123.1l-44.7-135.3L459.2,158l-35.9-37.1
+          l23.8-76.2L403.5-5.6H354.4z" />
+          <path d="M1705.9,1085.6l-24.7-31.1V1025l-14.5-28.7l-46-15.7l-71.6-79.1l61.1,93.5l39.8,12.7l8.4,17.3
+      		l-2.7,36.3l26.7,24.4H1705.9z" />
+        </clipPath>
+        <clipPath id="mask4" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M1702.9,1081.1l-24.7-31.1v-29.6l-14.5-28.7l-46-15.7l-71.6-79.1l61.1,93.5l39.8,12.7l8.4,17.3
+      		l-2.7,36.3l26.7,24.4H1702.9z" />
+          <polygon points="561.6,212.8 477.8,181.4 437,139.4 464,52.9 464,52.9 483.5,51.6 587.8,101.4 487.2,32.5 449.3,36 420.2,2.3
+          	413.9,-15.4 377.3,-28.8 354.7,-18.3 381,-3 358.9,-3 437,64.6 423.9,139.7 464,192.4 553.8,226.7 612.2,366.3 " />
+        </clipPath>
+        <clipPath id="mask5" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M1752.8-11v22.4l-46.8,20l-11.3,134.3l-114.5,39l-26.4,55.1l41.3-36.9l129.3-18.2l28.4-114.7
+      		l92.8-23.2l87.7,16V-11H1752.8z" />
+          <polygon points="654.1,312.3 531.8,266.5 472.2,205.1 511.7,78.9 511.7,78.9 540.2,76.9 692.4,149.7 545.5,49.1 490.3,54.1 447.7,5
+          	438.4,-20.9 385.1,-40.5 352,-25.2 390.5,-3 358.1,-3 472.2,95.8 453.1,205.5 511.7,282.5 642.7,332.6 728.1,536.4 " />
+          <path d="M1722.3,1107l-36.5-45.9v-43.7l-21.4-42.4l-67.9-23.2L1490.6,835l90.3,138.1l58.8,18.8l12.4,25.6
+              l-4,53.5l39.4,36H1722.3z" />
+        </clipPath>
+        <clipPath id="mask6" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M1722.3,1107l-36.5-45.9v-43.7l-21.4-42.4l-67.9-23.2L1490.6,835l90.3,138.1l58.8,18.8l12.4,25.6
+          l-4,53.5l39.4,36H1722.3z" />
+          <polygon points="761.9,445.5 587.8,380.4 503.1,293 559.2,113.4 559.2,113.4 599.8,110.5 816.3,214.1 607.4,71 528.7,78.2
+          	468.2,8.3 455,-28.6 379,-56.5 332,-35.2 386.8,-4 340.7,-4 503.1,137 475.9,293.3 559.2,403 745.7,474.3 867.2,764.4 " />
+          <path d="M1752.8-13.9V8.6l-46.8,20l-11.3,134.3l-114.5,39l-26.4,55.1l41.3-36.9l129.3-18.2l28.4-114.7
+          		l92.8-23.2l87.7,16v-93.7H1752.8z" />
+          <path d="M-16.3,1083l112.4-80.5l93-138.4L272,855l57.2,9.1L493.3,679L353.4,929.2l-117.4-7l-26.5,73.2
+                l39.9,87.6L-16.3,1083z" />
+        </clipPath>
+        <clipPath id="mask7" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M-16.3,1083l112.4-80.5l93-138.4L272,855l57.2,9.1L493.3,679L353.4,929.2l-117.4-7l-26.5,73.2
+      		l39.9,87.6L-16.3,1083z" />
+          <path d="M1700.8-13.9V15l-60.3,25.8L1626,213.7l-147.5,50.2l-33.9,71l53.2-47.5l166.6-23.4l36.5-147.7
+        		l119.5-29.9l112.9,20.7V-13.9H1700.8z" />
+          <polygon points="1662,1032.8 1662,962.1 1627.9,893.6 1518.4,856.1 1347.4,667 1493.6,890.4 1588.7,920.7 1608.7,962.1
+            	1602.3,1049.7 1666,1109 1722.3,1109 " />
+          <polygon points="799,517.4 588.8,438.9 486.5,333.4 554.3,116.6 554.2,116.5 603.2,113.1 864.6,238.2 612.4,65.4 517.5,74.1
+            	444.5,-10.3 428.5,-54.8 336.8,-88.5 280,-62.7 346.2,-25 290.6,-25 486.5,145.2 453.7,333.8 554.3,466.2 779.4,552.3 926,902.3 " />
+          <g transform="matrix(1, 0, 0, 1, 0, 0)">
+        </clipPath>
+        <clipPath id="mask8" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M1722.3,1107l-59.1-74.2v-70.7l-34.7-68.6l-109.8-37.5l-171.1-189l146.1,223.3l95.1,30.3l20,41.4
+      		l-6.4,86.6l63.7,58.3H1722.3z" />
+          <polygon points="353.4,929.2 493.3,679 329.1,864.1 272,855 189.2,864.1 96.2,1003 -16.3,1084 249.4,1084 209.5,995.9 236,922.4 " />
+          <polygon points="1932.1,126.8 1932,126.9 1932,66.3 1933,66.3 1933,-24 1567,-24 1567,-3 1473.1,16.4 1450.5,146.8 1219,184.6
+        	1165.8,238.1 1249.4,202.3 1511.1,184.6 1568.4,73.3 1640.2,64.7 1626,233.7 1478.4,283.9 1444.5,354.8 1497.7,307.3 1664.3,283.9
+        	1700.8,136.2 1820.4,106.2 1923.2,125 1873.8,222.2 1860.9,388.5 1719,421.5 1719,536.5 1687.3,671.4 1780,541.9 1780,434.5
+        	1903.8,400 1933.2,250.6 " />
+          <polygon points="588.8,438.9 486.5,333.4 506.4,269.8 541.5,321.2 716.6,355.5 1021.5,617.1 746.1,294.9 595.1,268.6 554.7,207.2
+        	548.7,134.5 554.3,116.6 554.2,116.5 603.2,113.1 864.6,238.2 612.4,65.4 543.6,71.7 543.2,67.7 462.7,10.8 444.5,-10.3
+        	428.5,-54.8 336.8,-88.5 280,-62.7 346.2,-25 290.6,-25 456.8,119.2 472.3,220.3 473.2,221.3 453.7,333.5 554.3,466.1 779.4,552.2
+        	926,902.3 799,517.4 " />
+        </clipPath>
+        <clipPath id="mask9" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M-16.3,1083l112.4-80.5l93-138.4L272,855l57.2,9.1L493.3,679L353.4,929.2l-117.4-7l-26.5,73.2
+          l39.9,87.6L-16.3,1083z" />
+          <polygon points="1932.1,126.8 1932,126.9 1932,66.3 1933,66.3 1933,-24 1567,-24 1567,-3 1473.1,16.4 1450.5,146.8 1219,184.6
+        1165.8,238.1 1249.4,202.3 1511.1,184.6 1568.4,73.3 1640.2,64.7 1626,233.7 1478.4,283.9 1444.5,354.8 1497.7,307.3 1664.3,283.9
+        1700.8,136.2 1820.4,106.2 1923.2,125 1873.8,222.2 1860.9,388.5 1719,421.5 1719,536.5 1687.3,671.4 1780,541.9 1780,434.5
+        1903.8,400 1933.2,250.6 " />
+          <polygon points="1662,1032.8 1662,962.1 1627.9,893.6 1518.4,856.1 1347.4,667 1319.3,624.2 1056.8,640.7 962.4,499.7 746.1,294.9
+        595.1,268.6 554.7,207.2 548.7,134.5 554.3,116.6 554.2,116.5 603.2,113.1 864.6,238.2 612.4,65.4 543.6,71.7 543.2,67.7
+        462.7,10.8 444.5,-10.3 428.5,-54.8 336.8,-88.5 280,-63.2 346.2,-26 290.6,-26 456.8,118.7 472.3,220 473.2,221.2 453.7,333.4
+        554.3,466 779.4,552.2 926,902.3 799,517.4 588.8,438.9 486.5,333.4 506.4,269.8 541.5,321.2 716.6,355.5 908.8,520.4 1022.4,679.7
+        1313.4,690.2 1493.6,890.4 1588.7,920.7 1608.7,962.1 1602.3,1049.2 1666,1108 1722.3,1108 " />
+        </clipPath>
+        <clipPath id="mask10" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <polygon points="1932,151.2 1932,151.3 1932,80.9 1933,80.9 1933,-24 1509,-24 1509,0.5 1399.5,23.1 1373,174.4 1104.1,218.3
+        	1042.3,280.4 1139.3,238.8 1443.1,218.3 1509.7,89 1593,79 1576.4,275.3 1405.2,333.5 1365.8,415.9 1427.5,360.7 1621,333.5
+        	1663.4,162 1802.1,127.3 1921.5,149.1 1864.1,261.9 1848.9,455 1684,493.3 1684,626.8 1647.9,783.4 1633.8,862.8 1544.9,865.1
+        	1518.6,856.1 1347.5,667 1319.3,624.2 1056.9,640.7 962.4,499.7 746.1,294.9 595.1,268.6 554.7,207.2 548.7,134.5 554.3,116.6
+        	554.2,116.5 603.2,113.1 864.6,238.2 612.4,65.4 543.6,71.7 543.2,67.7 462.7,10.8 444.5,-10.3 428.5,-54.8 336.8,-88.5 280,-63.2
+        	346.2,-26 290.6,-26 456.8,118.7 472.3,220 473.2,221.2 453.7,333.4 518,538 380,638 389.8,825.6 322.6,814.9 225.3,825.6
+        	115.9,988.9 -16.3,1084 296.1,1084 249.2,980.5 280.3,894.2 418.4,902.2 582.8,608.1 427.8,782.9 420,654 566,550 533.2,438.2
+        	554.3,466 779.4,552.2 926,902.3 799,517.4 588.8,438.9 486.5,333.4 506.4,269.8 541.5,321.2 716.6,355.5 908.8,520.4 1022.4,679.7
+        	1144,788 1064,944 1174,780 1094.4,682.3 1313.4,690.2 1493.6,890.4 1588.7,920.7 1608.7,962.1 1602.3,1049.2 1666,1108
+        	1722.3,1108 1662,1032.8 1662,962.1 1755,633 1755,508.4 1898.9,468.4 1933.1,294.9 " />
+        </clipPath>
+        <clipPath id="mask11" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M2001.4,238L1932,114.2V80.9l1,0V-24h-424V0.5l-109.5,22.5L1373,174.4l-268.9,43.9L1016,240l-56-24l-99.3,19.5l-248.3-170
+        	l-68.8,6.2l-0.3-4l-80.5-56.9l-18.2-21.1l-16-44.5l-91.7-33.7L280-63.2L346.2-26h-55.6l166.2,144.7L472.3,220l0.8,1.2l-19.5,112.2
+        	L518,538L380,638l9.8,187.6l-67.2-10.7l-97.3,10.7L115.9,988.9L-16.3,1084h312.4l-46.9-103.5l31.1-86.4l138.1,8.1l164.4-294.2
+        	L427.8,782.9L420,654l146-104l-32.8-111.8l21.1,27.8l225.1,86.2L926,902.3L799,517.4l-210.2-78.6L486.5,333.4l19.9-63.6l35.1,51.4
+        	l175.1,34.3l192.2,165l113.6,159.3L1144,788l-80,156l110-164l-79.6-97.7l219,7.9l180.3,200.2l26.3,8.4l86.6,92l-4.3,58.5l63.7,58.8
+        	h56.3l-60.3-75.2v-70.7l93-329.1V508.4l143.9-40l19.1-97.1L2001.4,238z M858,236l-9.1-5.3l10.5,5L858,236z M1847.1,455.6l2.6-1
+        	l0,0.4L1847.1,455.6z" />
+        </clipPath>
+        <clipPath id="mask12" clipPathUnits="objectBoundingBox" transform="scale(0.0005208333333 0.0009259259259)">
+          <path d="M2298,1208.9l-168-780.1l-147.1-160.2l18.5-30.6L1932,114.2V80.9l1,0V-24h-424V0.5l-109.5,22.5L1373,174.4l-268.9,43.9
+        	L1016,240l-56-24l-99.3,19.5l-248.3-170l-68.8,6.2l-0.3-4l-80.5-56.9l-18.2-21.1l-16-44.5l-91.7-33.7L280-63.2L346.2-26h-5.8
+        	l-516.1-76l-201,359.9l150,852l309-5.5l14.4-20.4h199.3l-46.9-103.5l31.1-86.4l138.1,8.1l164.4-294.2L427.8,782.9L420,654l146-104
+        	l-32.8-111.8l21.1,27.8l225.1,86.2L926,902.3L799,517.4l-210.2-78.6L486.5,333.4l19.9-63.6l35.1,51.4l175.1,34.3l192.2,165
+        	l113.6,159.3L1144,788l-80,156l110-164l-79.6-97.7l219,7.9l180.3,200.2l26.3,8.4l86.6,92l-4.3,58.5l63.7,58.8h36.4l31.5,53.4
+        	L2298,1208.9z M858,236l-9.1-5.3l10.5,5L858,236z" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <div id="transitionScreen"> </div>
+
+    <div id="crackScreenContainer">
+      <div id="crackScreen" class="noselect">
+        <img class="textSvg" src="resources/global/title.svg">
+        <div id="textContainer">
+          <section>
+            <img class="smalllerSvg" src="resources/global/disegno.svg" style="margin-top: 0">
+
+            <span>Historicamente na prática artística ocidental, o desenho foi entendido como uma parte essencial na formação e no treino do pintor e do escultor, a ferramenta mais imediata para tornar visível a ideia que seria depois refeita a
+              partir
+              de outros medias, como a pintura e a escultura. É a percepção do desenho como intermediário para se atingir um fim e não ele mesmo um fim em sim, associado à ideia de preparação, de estudo, e logo de incompleto, de inacabado —
+              quer dizer
+              o desenho é algo por completar, por acabar.
+              Durante o Renascimento o termo italiano disegno relaciona-se com a pureza da criação artística, a linha por oposição à cor, e para alguns artistas da época, como Leonardo da Vinci, o desenho tem uma dimensão espiritual, é uma
+              manifestação
+              do divino produzindo um simulacro do trabalho de criação de Deus. Deus teria à priori desenhado à linha a preto e branco, o mundo.
+              O ato de desenhar era no séc. XV e XVI a maneira como os artistas aprendiam o ofício da escultura e da pintura. Nas escolas e ateliers, os desenhos modelos dos ex-aprendizes mais notáveis, como Miguel Ângelo, Massaccio, Uccello,
+              por
+              exemplo, eram tidos como modelos a seguir para os próximos aprendizes. Na Europa as gravuras desses modelos circulavam pelos ateliers e escolas de pintura/escultura. A prática do desenho esteve assim até ao séc. XIX ligada a uma
+              forte
+              hierarquia e a uma prática canônica, desmantelada no modernismo e no aparecimento das vanguardas, que são por definição destruidoras das hierarquias e das convenções.
+              A partir dos anos 60 do séc. XX o desenho passa a ser visto não como um medium intermédio, um estudo para alguma obra, incompleto e inacabado, mas o fim em si, mesmo que incompleto e inacabado.
+              O curioso é que esta descolonização, a afirmação do desenho como medium aconteceu em simultâneo com a fotografia e o vídeo a invadirem os territórios do campo da arte nos anos 90, tais como as feiras de arte, bienais, galerias e
+              museus. E
+              disso é o exemplo o trabalho de Raymond Pettibon, Daniel Guzmán, Dan Perjovschi ou de João Fonte Santa.
+            </span>
+          </section>
+
+          <section>
+            <img class="smalllerSvg" src="resources/global/colapso.svg">
+
+            <span>O livro de artista de João Fonte Santa —O Colapso da Civilização — antes de ser livro foi um livro: ou melhor, este livro antes de o ser, foi vários livros e uma instalação.
+              Os desenhos que o formam, foram redesenhados a partir de outros realizados em diários gráficos desde 2000 em registo diarístico e tão pessoal como político.
+              A instalação (uma parede com cerca de 140 desenhos) que hoje também é este livro, fez parte da exposição Colapso da Civilização em 2014 no VPF Cream Art e que deu origem a dois livros de artista publicados pela editora Stolen
+              Books, este
+              e 54 Nuclear Power Plants. Cinquenta e quatro paisagens pastoris de centrais nucleares.
+
+              O João Fonte Santa é um recolector. Um respigador de imagens que pululam por aí: imagens do quotidiano, da imprensa, da internet. Imagens do mundo físico e do virtual. Chamo-lhe respigar e não apropriar de propósito. Para evitar o
+              termo
+              “apropriação” ligado à filosofia e à história da arte, desde o século passado, como os inevitáveis ready –mades de Marcel Duchamp.
+              Respigar remete-nos para uma ação que se opõe ao hedonismo da nossa contemporaneidade e leva-nos para um filme/documentário de Agnés Vardas e para uma célebre pintura de Millet (o filme começa com planos de pinturas sobre o tema).
+              E
+              porque os ateliers do João Fonte Santa que conheci ao longo dos anos são locais onde apetece respigar, e o significante da palavra acrescenta uma intenção/ação ao título, Colapso da Civilização.
+            </span>
+          </section>
+
+          <section>
+            <img class="smalllerSvg" src="resources/global/scanning.svg" style="width: 10%; min-width: 190px">
+
+            <span>O folhear do livro é como um scanning do real (tipo TAC) do que foi acontecendo sem a linha cronológica definida mas em expansão e em contração como o universo. Um olhar sobre o mundo a traço preto, veloz e inacabado.
+              Neste projeto— instalação e livro— Colapso da Civilização, ao contrário de outros projetos, como em Todos os dias a mesma coisa- carro-trabalho-comer-trabalho-carro-sofá-tv-dormir-carro-trabalho-até quando vais aguentar?-um em
+              cada dez
+              enlouquece-um em cada cinco rebenta, (statement de King Mob, grupo londrino de artistas ativistas radicais, 1970), os desenhos seguiam a lógica da transformação da imagem fotográfica em desenho. Fotografias de imprensa concretas
+              que
+              ilustravam situações reais. Agora há um redesenho de um desenho, não há uma imagem em concreto mas estilhaços recolhidos (os desenhos originais) de várias imagens-pensamento que João Fonte Santa tornou visível.
+              A narrativa visual faz-se a partir de nós leitores/ espetadores imaginando uma parte dos conteúdos sugeridos pelos desenhos e pelas frase-títulos que acompanham cada imagem. Esta narrativa visual não narra em concreto nada, mas
+              esboça uma
+              sucessão de acontecimentos, de cenários, de personagens que nos dão a sensação de narrativa. E em teoria, o que nós retiramos do conceito da narrativa, é muitas vezes, apenas aquilo que lá colocamos.
+              Assim, neste livro/colapso revisitamos:
+              A política das indústrias culturais: os desenhos, Ted, Ted#2, Gerturde Stein - Pablo Picasso, 1905-06; a política internacional: os desenhos, 2013 Année Èrotique, Me Terrorista? No Me Just A Workin’ Fô Di Goverment, o Colapso da
+              Civilização; o hedonismo: os desenhos, O Grito de Edward Munch, O Fim da Sociedade de Espetáculo, O Declínio do Império Romano; a política espacial mundial: os desenhos; Primeiro Como Estratégia Depois como Farsa, Programa
+              Espacial Norte
+              Coreano, Sputnik é Um Belo Nome; a política nacional: os desenhos, Presidente Cavaco Silva, Volta em Portugal em Tuc Tuc.
+              E robots a amarem-se.</span>
+          </section>
+
+          <p id="nota">Nota: Texto de apresentação do livro no Passevite,<br> Lisboa, 2016 por Alice Geirinhas</p>
+        </div>
+        <div id="gradient"></div>
+      </div>
+
+      <div id="aboutScreen"><img src="resources/global/creds.svg"></div>
+      <div id="about"><img src="resources/global/about.svg"></div>
+
+    </div>
+    <div id="blackOut">
+    </div>
+  </div>
+
+
+  <div id="error" style="display: none">
+    <div>
+      <img src="resources/global/erro.svg">
+      <section>O <i>website</i> não funciona corretamente no Safari, <br>recomendamos o uso do Google Chrome. <br><br> Pedimos desculpa pelo incómodo. <br> Obrigado.</section>
+    </div>
+  </div>
+</body>
+
+</html>

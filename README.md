@@ -4,4 +4,8 @@ Website developed as part of the final project for the class Design Editorial em
 
 The outline for the project was to create a digital and interactive adaptation of the book *O Colapso da Civilização* by João Fonte Santa. We were free to explore our own interpretation of the book, which we did by constructing a dystopian choose-your-own-adventure narrative based on a selection of illustrations included in the book. 
 
+Final website: https://andrre-ls.github.io/demd-colapso-da-civilizacao/
+
+
 Implemented with the help of [Anime.js](https://animejs.com/) and [jQuery](https://jquery.com/).
+
